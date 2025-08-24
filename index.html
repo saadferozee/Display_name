@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Calling</title>
+
+    <!-- styling with CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section {
+            text-align: center;
+            border: 2px solid gray;
+            border-radius: 20px;
+            width: 80%;
+            margin: 100px auto;
+            padding: 80px;
+        }
+        h1 {
+            margin-bottom: 60px;
+            font-size: 90px;
+            font-family: monospace;
+            font-weight: 900;
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            /* gap: -3px; */
+        }
+        input {
+            width: 600px;
+            padding: 15px 30px;
+            border-radius: 10px 0 0 10px;
+            border-right: none;
+            cursor: text;
+            font-size: 20px;
+        }
+        button {
+            padding: 15px 30px;
+            border-radius: 0 10px 10px 0;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- main document -->
+    <section>
+        <h1 id="text-display">display your name.</h1>
+        <form action="">
+            <input id="text-input" type="text" placeholder="Enter name :">
+            <button id="update-btn" type="button">Update</button>
+        </form>
+    </section>
+
+    <!-- added responses with Javascript -->
+    <script>
+        document.getElementById('update-btn').addEventListener('click', function() {
+            console.log('button clicked');
+            document.getElementById('text-display').innerText = document.getElementById('text-input').value ;
+            document.getElementById('text-input').setAttribute('placeholder', 'Enter a new name to display :') ;
+        })
+    </script>
+
+</body>
+
+</html>
